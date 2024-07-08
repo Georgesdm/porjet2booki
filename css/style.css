@@ -16,6 +16,8 @@
 body {
     display: flex;
     justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 .main-container {
@@ -56,6 +58,36 @@ a {
 
 .neutral-star {
     color: var(--main-bg-color)
+}
+/****** Header + Navigation ******/
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+header .logo img {
+    width: 61px;
+    height: 19px;
+    padding: 30px 0px;
+}
+
+nav {
+    display: flex;
+    gap: 68px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    border-top: 2px solid transparent;
+    padding-top: 14px;
+}
+
+nav a:hover {
+    color: var(--main-color);
+    border-top: 2px solid var(--main-color);
 }
 
 /****** Hebergements And Populaires ***********/
