@@ -386,18 +386,18 @@ nav a:hover {
 .activities-cards {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     padding-bottom: 30px;
     gap: 30px;
-    width : 100%;
 }
 
 .activities-cards a {
     border: 1px solid transparent;
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 20px;
     display:flex;
     flex-direction: column;  
-    width: 23.25%;
+    width: calc((100% / 4) - 30px); /*remplacer le % fixe*/
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
@@ -405,6 +405,7 @@ nav a:hover {
     height: 380px;
     object-fit: cover;
     border-radius: 20px 20px 0px 0px;
+    width: 100%;
 }
 
 .activities-cards p {
@@ -504,12 +505,20 @@ nav a:hover {
         font-size: 14px;/*edited*/
     }
 
-    .activities-cards {
-        width: 100%;
+    .activities-cards p {
+        display: flex;
+    }
+
+    .activities-cards a {
     }
     .activities-cards img {
-        height: 140px;
+        height: 200px;
     }
+
+    .activities-cards p {
+        display: flex;
+    }
+    
 
 /* Small devices (phones, less than 768px)
 @media (max-width: 768px) {
