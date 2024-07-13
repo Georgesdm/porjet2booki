@@ -118,20 +118,30 @@ nav a:hover {
 
 
 /****** Search Bar ******/
+
+.searchbar {
+    display: flex;
+    flex-direction: row;
+}
 .searchbar form {
     display: flex;
     flex-direction: row;
-    width: 377px;
-    height: 49px;
+    max-width: 377px;
 }
 
 .searchbar i.fa-solid.fa-location-dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: black;
     font-size: 18px;
     border: 1px solid var(--main-bg-color);
     border-radius: 15px 0px 0px 15px;
     background-color: var(--main-bg-color);
-    padding: 14px 24px;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    box-sizing: border-box;
 }
 
 .searchbar input {
@@ -155,7 +165,7 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     width: 132px;
-    height: 49px;
+    height: 50px;
     color: white;
     font-size: 18px;
     font-weight: bold;
@@ -164,6 +174,7 @@ nav a:hover {
     border-left: none;
     border-radius: 0 15px 15px 0;
     padding: 16px;
+    box-sizing: border-box;
 }
 
 .searchbar button span {
@@ -172,7 +183,6 @@ nav a:hover {
 
 .searchbar i.fa-solid.fa-magnifying-glass {
     display: none; /* masque icon recherche pour le desktop */
-    
 }
 
 /* Filterbar */
@@ -192,8 +202,8 @@ nav a:hover {
 .filter-container {
     display: flex;
     flex-direction: row;
-    gap: 15px;
     justify-content: center;
+    gap: 15px;
 }
 
 .filter {
@@ -242,7 +252,6 @@ nav a:hover {
 }
 
 .hebergements-and-populaires section {
-    background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
@@ -324,6 +333,7 @@ nav a:hover {
 /****** Populaires ***********/
 .populaires {
     width: 32%;
+    background-color: var(--main-bg-color);
 }
 
 .populaires-title {
@@ -496,15 +506,15 @@ nav a:hover {
     }
 
     .populaires-cards a {
-        width: 33%;/*edited*/
+        width: 33%;
     }
 
     .populaires-cards .card-title {
-        font-size: 16px; /*edited*/
+        font-size: 16px;
     }
 
     .populaires-cards .card-subtitle {
-        font-size: 14px;/*edited*/
+        font-size: 14px;
     }
 
     .activities-cards p {
@@ -518,10 +528,9 @@ nav a:hover {
     .activities-cards p {
         display: flex;
     }
-}
-    
+} 
 
-/* Small devices (phones, less than 768px) */
+/* Small devices (phones, less than 768px) */ 
 @media (max-width: 767.98px) {
     .main-container {
         max-width: 768px;
@@ -582,22 +591,90 @@ nav a:hover {
         display: inline-block;
         color: white;
     }
-
-    /* Filterbar */
-
-    .filterbar {
-
-
-    }
+    
     .filter-container {
         width: 100%;
         flex-wrap: wrap;
-        margin-bottom: 35px;
         justify-content: center;
         align-content: center;
     }
 
     .filter {
         flex-wrap: wrap;
+        flex: 1 1 calc(50% - 10px);
+    }
+
+    .filter-container p {
+        font-size: 14px;
+    }
+
+    .hebergements-and-populaires {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .hebergements-and-populaires section {
+        border-radius: 0px;
+    }
+
+    .hebergements {
+        background-color: white;
+    }
+    .hebergements-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hebergements-cards a {
+        width: 100%;
+    }
+
+    .populaires {
+        margin-top: 0;
+    }
+    
+    .populaires-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .populaires-title {
+        margin-bottom: 15px;
+    }
+    .populaires-cards .card {
+        display: flex;
+        margin-top: 0px;
+    }
+
+    .populaires-cards a {
+        width: 100%;
+    }
+    
+    .activities {
+        margin-top: 0;
+    }
+
+    .activities-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .activities-cards .card {
+        display: flex;
+        margin-top: 0px;
+    }
+    
+    .activities-cards a {
+        width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-list {
+        width: 100%;
     }
 }
