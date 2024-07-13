@@ -184,6 +184,7 @@ nav a:hover {
 }
 
 .filterbar p {
+    display: flex;
     font-size: 18px;
     font-weight: bold;
 }
@@ -209,6 +210,7 @@ nav a:hover {
 }
 
 .filter p {
+    display: flex;
     font-size: 17px;
     color: black;
 }
@@ -508,9 +510,7 @@ nav a:hover {
     .activities-cards p {
         display: flex;
     }
-
-    .activities-cards a {
-    }
+    
     .activities-cards img {
         height: 200px;
     }
@@ -518,27 +518,20 @@ nav a:hover {
     .activities-cards p {
         display: flex;
     }
+}
     
 
-/* Small devices (phones, less than 768px)
-@media (max-width: 768px) {
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
     .main-container {
-        width: 100%;
         max-width: 768px;
-        min-width: 320px;
-        margin: 30px 0 0 0;
         padding: 0;
-        box-sizing: border-box;
     }
 
     header {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-    
-    header .logo img {
-        padding-top: 0px;
     }
 
     nav {
@@ -547,6 +540,7 @@ nav a:hover {
         width: 100%;
         text-align: center;
         gap:0px;
+        
     }
     nav a {
         border-bottom: 2px solid transparent;
@@ -564,14 +558,10 @@ nav a:hover {
         justify-content: center;
         padding-left: 20px;
         padding-right: 20px;
-    }
+    } 
 
     .searchbar form {
         justify-content: center;
-    }
-
-    .searchbar input {
-        padding: 14px 65px 14px 24px;
     }
 
     .searchbar button {
@@ -592,4 +582,22 @@ nav a:hover {
         display: inline-block;
         color: white;
     }
-}*/
+
+    /* Filterbar */
+
+    .filterbar {
+
+
+    }
+    .filter-container {
+        width: 100%;
+        flex-wrap: wrap;
+        margin-bottom: 35px;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .filter {
+        flex-wrap: wrap;
+    }
+}
