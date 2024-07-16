@@ -67,6 +67,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 30px;
+    padding-bottom: 30px;
 }
 
 header .logo img {
@@ -97,7 +98,7 @@ nav a:hover {
 .infogroup {
     display: flex;
     flex-direction: column;
-    gap: 35px;
+        gap: 35px;
 }
 
 /****** Headline ******/
@@ -383,8 +384,8 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 35px;
+    margin-top: 35px;
+    /*margin-bottom: 35px;*/
     border: 1px solid transparent;
     gap: 30px;
     padding: 30px;
@@ -542,6 +543,7 @@ nav a:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 0px;
     }
 
     nav {
@@ -679,7 +681,5 @@ nav a:hover {
     .footer-list {
         width: 100%;
         height: 100%;
-
-
     }
 }
