@@ -1,6 +1,7 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
 }
 
 :root {
@@ -72,7 +73,6 @@ header {
 
 header .logo img {
     width: 61px;
-    height: 19px;
     padding-top: 30px;
 }
 
@@ -536,7 +536,6 @@ nav a:hover {
     .main-container {
         max-width: 768px;
         padding: 0;
-        overflow-x: hidden;
     }
 
     header {
